@@ -1,0 +1,72 @@
+/* Container always 100% height of user screen */
+.landing-container{
+    background: #171717;
+    height: 100vh;
+    width: 100%;
+}
+
+.container{
+    padding: 0 2rem 0;
+}
+/* Navigation container for logo and language buttons */
+.navigation-container{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    height: 120px;
+}
+.button-container{
+    align-items: center;
+    display: flex;
+    flex: row;
+    height: 100%;
+}
+.button{
+    border: none;
+    background: #171717;;
+    color: #ededed;
+    cursor: pointer;
+    font-style: italic;
+    text-decoration: none;
+}
+
+
+/* Text container with text in the middle of the screen */
+.text-container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 100%;
+    justify-content: center;
+}
+.landing-text{
+    font-size: 1.5rem;
+    color: #ededed;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: lighter;
+    line-height: 4rem;
+}
+
+.patrik{
+    color: #da0037;
+}
+
+/* Social media */
+
+.social-media-container{
+    width: 30%;
+}
+
+.social-icon{
+    padding-bottom: .5rem;
+    transform: scale(.6);
+}
+
+/* Scroll section */
+.scroll-text{
+    color: #444444;
+    font-size: .6rem;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
