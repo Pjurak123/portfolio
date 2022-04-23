@@ -30,6 +30,10 @@
     text-decoration: none;
 }
 
+.active{
+    text-decoration: line-through;
+}
+
 
 /* Text container with text in the middle of the screen */
 .text-container{
@@ -59,8 +63,9 @@
 }
 
 .social-icon{
-    padding-bottom: .5rem;
-    transform: scale(.6);
+    cursor: pointer;
+    padding-bottom: .3rem;
+    transform: scale(.5);
 }
 
 /* Scroll section */
@@ -69,4 +74,9 @@
     font-size: .6rem;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
+}
+.triangle{
+    margin: 0 auto;
+    padding: .5rem;
+    text-align: center;
 }

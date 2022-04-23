@@ -5,15 +5,23 @@ import Logo from "./images/symbol1.svg";
 import Github from "./images/github.svg";
 import Instagram from "./images/instagram.svg";
 import Linkedin from "./images/linkedin.svg";
+import Scrolldown from "./images/scroll-down.svg";
 
 function Landing(){
 
-    // function handleClick(e) {
-    //     setLanguage(e.target.value)
-    //     console.log(language);
-    // }
+    const [primary, setPrimary] = useState(false);
+    const [secondary, setSecondary] = useState(true)
 
-    // const [language, setLanguage] = useState(0);
+    function handleChange(e){
+       const value = e.target.value;
+
+       if(value === "hrv"){
+           setPrimary(true);
+       }else{
+        setPrimary(false);
+        setSecondary(true);
+       }
+    }
 
     
     return(
@@ -22,11 +30,11 @@ function Landing(){
             <nav className="navigation-container container">
                 <img src={Logo} alt="Japanese-symbol" className="symbol"></img>
                 <div className="button-container">
-                    <button className="button" value="hrv">
+                    <button className="button" value="hrv" onClick={handleChange} style={primary ? {className: "active"} : {textDecoration: "none"}}>
                         HRV
                     </button>
                     <p className="button">/</p>
-                    <button className="button" value="eng">
+                    <button className="button" value="eng" onClick={handleChange} style={{className: secondary ? "active" : "none"}}>
                         ENG
                     </button>
                 </div>
@@ -50,6 +58,7 @@ function Landing(){
             {/* Scroll down */}
             <div className="scroll-container">
                 <p className="scroll-text">SCROLL DOWN</p>
+                <img className="triangle" src={Scrolldown} alt="scroll-down" />
             </div>
         </div>
     )
