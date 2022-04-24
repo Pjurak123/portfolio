@@ -17,6 +17,7 @@ function Landing(){
 
        if(value === "hrv"){
            setPrimary(true);
+           setSecondary(false)
        }else{
         setPrimary(false);
         setSecondary(true);
@@ -30,11 +31,11 @@ function Landing(){
             <nav className="navigation-container container">
                 <img src={Logo} alt="Japanese-symbol" className="symbol"></img>
                 <div className="button-container">
-                    <button className="button" value="hrv" onClick={handleChange} style={primary ? {className: "active"} : {textDecoration: "none"}}>
+                    <button className={(primary ? "button" : "active button")} value="hrv" onClick={handleChange} >
                         HRV
                     </button>
                     <p className="button">/</p>
-                    <button className="button" value="eng" onClick={handleChange} style={{className: secondary ? "active" : "none"}}>
+                    <button className={(secondary ? "button" : "active button")} value="eng" onClick={handleChange}>
                         ENG
                     </button>
                 </div>
@@ -42,7 +43,7 @@ function Landing(){
             {/* Text in the middle of the screen */}
             <section className="text-container container">
                 <div className="textbox">
-                <h3 className="landing-text">Hello,</h3>
+                <h3 className="landing-text 1">Hello,</h3>
                 <h3 className="landing-text">My name is <span className="patrik"> Patrik </span> ,</h3>
                 <h3 className="landing-text">I am Frontend Developer!</h3>
                 </div>
