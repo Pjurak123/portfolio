@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "./Landing.css"
-import Logo from "./images/symbol1.svg";
 import Github from "./images/github.svg";
 import Instagram from "./images/instagram.svg";
 import Linkedin from "./images/linkedin.svg";
 import Scrolldown from "./images/scroll-down.svg";
+import Logo from "./images/logo.svg";
 
 function Landing(){
 
@@ -44,7 +44,7 @@ function Landing(){
             <section className="text-container container">
                 <div className="textbox">
                 <h3 className="landing-text 1">Hello,</h3>
-                <h3 className="landing-text">My name is <span className="patrik"> Patrik </span> ,</h3>
+                <h3 className="landing-text">My name is <span className="pink-color"> Patrik </span> ,</h3>
                 <h3 className="landing-text">I am Frontend Developer!</h3>
                 </div>
             </section>
