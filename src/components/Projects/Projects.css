@@ -1,0 +1,57 @@
+.project-container{
+    background: #171717;
+    height: 100%;
+    width: 100%;
+}
+
+.projects-title{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ededed;
+    position: relative;
+    padding: 3rem 0 2rem;
+}
+.projects-title::after{
+    content: "";
+    display: block;
+    height: 0.5px;
+    background-color: #ededed;
+    position: relative;
+    top: -12px;
+    width: 30%;
+    left: 73%;
+    overflow: hidden;
+}
+
+/* Card container and content */
+.card{
+    border: 1px solid #ededed;
+    border-radius: 1.25rem;
+    padding: 1.5rem;
+}
+.icons-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.project-title{
+    color: #ededed;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    padding: 1rem 0;
+}
+
+.project-description{
+    color: #444;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.5rem;
+}
+.project-list-technologies{
+    font-family: 'Space Mono', monospace;
+    font-size: .8rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: #444;
+    list-style-type: none;
+    padding: 1rem 1rem 0;
+}
