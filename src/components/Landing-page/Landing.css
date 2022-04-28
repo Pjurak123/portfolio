@@ -1,6 +1,6 @@
 /* Container always 100% height of user screen */
 .landing-container{
-    background: #171717;
+    background: #000;
     height: 100vh;
     width: 100%;
 }
@@ -63,10 +63,14 @@
     width: 30%;
 }
 
+.social-media{
+    display: flex;
+    flex-direction: column;
+}
+
 .social-icon{
     cursor: pointer;
-    padding-bottom: .3rem;
-    transform: scale(.5);
+    margin-bottom: 1rem;
 }
 
 /* Scroll section */
@@ -80,4 +84,13 @@
     margin: 0 auto;
     padding: .5rem;
     text-align: center;
+}
+
+/* Logo animation in the middle of the screen */
+
+.logo-animation{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }

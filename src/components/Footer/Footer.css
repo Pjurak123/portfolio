@@ -1,0 +1,37 @@
+.footer-container{
+    background: #171717;
+    height: 100%;
+    width: 100%;
+}
+.footer-content{
+    margin: 0 auto;
+    text-align: center;
+    width: 70%;
+}
+
+.footer-media{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer-designed{
+    color: #444444;
+    font-family: 'Space Mono', monospace;
+    font-size: .8rem;
+    padding-bottom: .5rem;
+}
+.footer-copyright{
+    color: #444444;
+    font-family: "Space Mono", monospace;
+    font-size: .8rem;
+    padding-bottom: 1rem;
+}
+.media:hover{
+    fill: #da0037;
+    transition: 0.5s ease-in-out;
+}
+
+.scale{
+    transform: scale(.5);
+}

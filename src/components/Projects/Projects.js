@@ -8,7 +8,7 @@ import { Data } from "./Data.js";
 function Projects(props) {
 
     return(
-        <div className="project-container container">
+        <div className="project-container container is-loading">
             <div className="project-content">
                 <h3 className="projects-title">Some Things I've Built</h3>
                 {Data.map ((data, index) => {
@@ -16,7 +16,7 @@ function Projects(props) {
                         <div className="card">
                         <div className="icons-container">
                         <img src={Folder} alt="folder" />
-                        <a href="/"><img src={External} alt="external-link"/></a>
+                        <a href={data.link} target="_blank"><img src={External} alt="external-link"/></a>
                         </div>
                         
                         <h3 className="project-title">{data.title}</h3>

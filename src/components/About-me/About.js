@@ -3,7 +3,7 @@ import "./About.css";
 
 function About() {
     return(
-        <div className="about-container container">
+        <div className="about-container container is-loading">
             <div className="about-row">
                 <div className="about-me-text-container">
                     <h3 className="about-me-title">
