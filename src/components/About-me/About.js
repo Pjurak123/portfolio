@@ -1,30 +1,32 @@
 import React from "react";
+import { useRef, useEffect } from "react";
 import "./About.css";
-import {gsap} from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Profile from "./images/profile.svg";
+import {gsap} from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger"
+gsap.registerPlugin(ScrollTrigger);
+
 
 function About() {
 
-//    if (typeof window !== "undefined") {
-//        gsap.registerPlugin(ScrollTrigger)
-//    }
 
-//     gsap.fromTo(".about-me-title", {
-//         x: 300,
-//         duration: 2,
-//         scrollTrigger: {
-//             trigger: ".about-me-title",
-//             start: "center",
-//         },
-//     }, {
-//         x: 0
-//     });
+    var tl = gsap.timeline({duration: 1, ease: "power1.out"});
+
+    const aboutAnime = useRef(null);
+    useEffect(() => {
+        const el = aboutAnime.current;
+        gsap.fromTo(el, {x: 200, opacity: 0, visibility: "hidden", duration: 1, smoothOrigin: true}, {x: 0, opacity: 1, visibility: "visible", duration: 2, scrollTrigger: {
+            trigger: el,
+            start: 40
+        }});
+    }, [])
+
+
+        
 
     return(
         <div className="about-container container is-loading">
             {/* <div className="about-row"> */}
-                <div className="about-me-text-container">
+                <div className="about-me-text-container" ref={aboutAnime}>
                     <h3 className="about-me-title">
                         About Me
                     </h3>

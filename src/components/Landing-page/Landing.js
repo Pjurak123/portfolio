@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import ReactDOM from "react-dom";
 import "./Landing.css"
 import {gsap} from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/src/all";
 import Scrolldown from "./images/scroll-down.svg";
 import Logo from "./images/logo.svg";
 
@@ -26,17 +27,19 @@ function Landing(){
 
     /* Animation part */
 
-
-    var tl = gsap.timeline({duration: 1, ease: "power1.out"});
+    gsap.registerPlugin(gsap,ScrollTrigger)
+    var tl = gsap.timeline({duration: 1, ease: "power1.out", });
    
     useEffect(() => {
         tl.to(".landing-container", { backgroundColor: "#000000"});
-        tl.fromTo("#polygon", {opacity: 0, drawSVG: "0%", fill: "#000000", duration: 1}, {opacity: 1, drawSVG:"50%",  duration: 1.5});
+        tl.fromTo("#polygon", {opacity: 0, fill: "#000000", duration: 2, smoothOrigin: true}, {opacity: 1, duration: 1.5});
         tl.fromTo("#P", {opacity: 0}, {opacity: 1, duration: 1.5});
-        tl.fromTo(".logo-svg", {opacity: 1}, {opacity: 0, ease: "power4.out", rotate: 360, scale: 0.2, duration: 1});
+        tl.fromTo(".logo-svg", {opacity: 1}, {opacity: 0, ease: "power4.out", scale: 0.2, duration: 1});
         tl.to(".landing-container", {backgroundColor: "#171717"});
-        tl.fromTo(".navigation-container", {opacity: 0, y: 150 }, {opacity: 1, y: 0, duration: 1});
-        tl.fromTo(".text-container", {opacity: 0, y: 150}, {opacity: 1, y: 0, duration: 1});
+        tl.fromTo(".navigation-container", {opacity: 0, y: 150, smoothOrigin: true }, {opacity: 1, y: 0, duration: 1});
+        tl.fromTo(".text1", {opacity: 0, y: 50 }, {opacity: 1, y: 0, duration: 0.5});
+        tl.fromTo(".text2", {opacity: 0, y: 50 }, {opacity: 1, y: 0, duration: 0.5});
+        tl.fromTo(".text3", {opacity: 0, y: 50 }, {opacity: 1, y: 0, duration: 0.5});
         tl.fromTo(".social-media", {opacity: 0, x: -100}, {opacity: 1, x: 0, duration: 1})
         tl.fromTo(".scroll-container", {opacity: 0}, {opacity: 1, onComplete:
             () => 
@@ -47,12 +50,10 @@ function Landing(){
             document.querySelector(".footer-container").classList.remove("is-loading")
             )
         });
-
     });
  
 
 
-    
     return(
         <div className="landing-container">
         <div className="logo-animation">
@@ -79,9 +80,9 @@ function Landing(){
             {/* Text in the middle of the screen */}
             <section className="text-container container-landing">
                 <div className="textbox">
-                <h3 className="landing-text 1">Hello,</h3>
-                <h3 className="landing-text">My name is <span className="pink-color"> Patrik </span> ,</h3>
-                <h3 className="landing-text">I am Frontend Developer!</h3>
+                <h3 className="landing-text text1">Hello,</h3>
+                <h3 className="landing-text text2">My name is <span className="pink-color"> Patrik </span> ,</h3>
+                <h3 className="landing-text text3">I am Frontend Developer!</h3>
                 </div>
             </section>
             {/* Social icons  */}

@@ -1,5 +1,7 @@
 .footer-container{
     background: #171717;
+    position: relative;
+    overflow: hidden;
     height: 100%;
     width: 100%;
 }
