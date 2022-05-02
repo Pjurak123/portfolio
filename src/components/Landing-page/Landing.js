@@ -7,6 +7,7 @@ import Logo from "./images/logo.svg";
 
 function Landing(){
 
+
     const [primary, setPrimary] = useState(false);
     const [secondary, setSecondary] = useState(true)
 
@@ -34,9 +35,9 @@ function Landing(){
         tl.fromTo("#P", {opacity: 0}, {opacity: 1, duration: 1.5});
         tl.fromTo(".logo-svg", {opacity: 1}, {opacity: 0, ease: "power4.out", rotate: 360, scale: 0.2, duration: 1});
         tl.to(".landing-container", {backgroundColor: "#171717"});
-        tl.fromTo(".navigation-container", {opacity: 0}, {opacity: 1});
-        tl.fromTo(".text-container", {opacity: 0}, {opacity: 1});
-        tl.fromTo(".social-media", {opacity: 0}, {opacity: 1})
+        tl.fromTo(".navigation-container", {opacity: 0, y: 150 }, {opacity: 1, y: 0, duration: 1});
+        tl.fromTo(".text-container", {opacity: 0, y: 150}, {opacity: 1, y: 0, duration: 1});
+        tl.fromTo(".social-media", {opacity: 0, x: -100}, {opacity: 1, x: 0, duration: 1})
         tl.fromTo(".scroll-container", {opacity: 0}, {opacity: 1, onComplete:
             () => 
             (

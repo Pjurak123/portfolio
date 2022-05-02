@@ -6,16 +6,20 @@ import Profile from "./images/profile.svg";
 
 function About() {
 
-   if (typeof window !== "undefined") {
-       gsap.registerPlugin(ScrollTrigger)
-   }
+//    if (typeof window !== "undefined") {
+//        gsap.registerPlugin(ScrollTrigger)
+//    }
 
-    gsap.fromTo(".about-me-title", {
-        scrollTrigger: ".about-me-title",
-        x: 500
-    }, {
-        x: 0
-    });
+//     gsap.fromTo(".about-me-title", {
+//         x: 300,
+//         duration: 2,
+//         scrollTrigger: {
+//             trigger: ".about-me-title",
+//             start: "center",
+//         },
+//     }, {
+//         x: 0
+//     });
 
     return(
         <div className="about-container container is-loading">
