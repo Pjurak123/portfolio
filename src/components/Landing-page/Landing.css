@@ -8,6 +8,10 @@
 .container{
     padding: 0 2rem 0;
 }
+
+.container-landing{
+    padding: 0 2rem 0;
+}
 /* Navigation container for logo and language buttons */
 .navigation-container{
     align-items: center;
@@ -60,6 +64,7 @@
 /* Social media */
 
 .social-media-container{
+    padding-left: 2rem;
     width: 30%;
 }
 
@@ -70,10 +75,23 @@
 
 .social-icon{
     cursor: pointer;
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+.social-icon:hover{
+    margin-bottom: .5rem;
+    transition: .2s all ease-in-out;
 }
 
 /* Scroll section */
+
+.scroll-container{
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
 .scroll-text{
     color: #444444;
     font-size: .6rem;
@@ -93,4 +111,35 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+
+/* Tablet mode */
+
+@media screen and (min-width: 1024px) {
+    .social-media{
+        position: fixed;
+    }
+    .social-media::after{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 90px;
+        margin-left: .7rem;
+        background-color: #ededed;
+        bottom: -3.5rem;
+    }
+    .social-media-container{
+        padding-left: 2rem;
+    }
+    .textbox{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .scroll-container{
+        position: relative;
+    }
 }

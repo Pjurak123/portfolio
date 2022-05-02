@@ -1,6 +1,6 @@
 .about-container{
     background: #171717;
-    height: 100vh;
+    height: 100%;
     width: 100%;
 }
 
@@ -18,9 +18,9 @@
     background-color: #ededed;
     position: relative;
     top: -12px;
-    width: 60%;
-    left: 42%;
+    left: 7rem;
     overflow: hidden;
+    width: 200px;
 }
 
 .first-part{
@@ -48,6 +48,8 @@
     overflow: hidden;
     list-style: none;
     text-align: left;
+    margin-bottom: 0;
+    padding-bottom: 3rem;
 }
 .list-item::before{
     font-size: 1rem;
@@ -64,3 +66,83 @@
     font-size: .9rem;
     padding-bottom: .7rem;
 }
+
+/* .about-me-image-container{
+    display: none;
+    position: relative;
+    margin: 0 auto;
+    height: 250px;
+    width: 250px;
+}
+.about-wrapper{
+    background: url("./images/profile1.svg");    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    display: none;
+    position: absolute;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+.about-layer{
+    position: absolute;
+    background-color: #da0037;
+    border-radius: .4rem;
+    filter: opacity(.5) brightness(100%);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.about-wrapper::after{
+    border: 2px solid green;
+    top: 20px;
+    left: 20px;
+} */
+
+/* Tablet mode */
+
+@media screen and (min-width: 767px) {
+    .about-me-title{
+        font-size: 1.35rem;
+        padding-top: 5rem;
+    }
+    .about-me-title::after{
+        margin-left: 1rem;
+        width: 80%;
+        overflow: hidden;
+    }
+}
+
+/* Desktop mode */
+@media screen and (min-width: 1024px){
+    .about-container{
+        height: 100vh;
+        width: 100%;
+    }
+    .container{
+        padding: 0 8rem 0 !important;
+    }
+  .about-row{
+      display: flex;
+      flex-direction: row ;
+  }
+  .about-me-text-container{
+      max-width: 80%;
+      margin: 0 auto;
+      height: 100%;
+  }
+}
+
+
+/* Smallest mobile phone mode */
+
+@media screen and (max-width: 374px) {
+    .about-me-title::after{
+        width: 150px;
+    }
+}
+

@@ -1,10 +1,25 @@
 import React from "react";
 import "./About.css";
+import {gsap} from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Profile from "./images/profile.svg";
 
 function About() {
+
+   if (typeof window !== "undefined") {
+       gsap.registerPlugin(ScrollTrigger)
+   }
+
+    gsap.fromTo(".about-me-title", {
+        scrollTrigger: ".about-me-title",
+        x: 500
+    }, {
+        x: 0
+    });
+
     return(
         <div className="about-container container is-loading">
-            <div className="about-row">
+            {/* <div className="about-row"> */}
                 <div className="about-me-text-container">
                     <h3 className="about-me-title">
                         About Me
@@ -25,10 +40,13 @@ function About() {
                         <li className="list-item">Pl/Sql</li>
                     </ul>
                 </div>
-                <div className="about-me-image-container">
-                    <img className="image" src="" alt="patrik" />
-                </div>
-            </div>
+                {/* <div className="about-me-image-container">
+                    <div className="about-wrapper">
+                        <div className="about-layer">
+                        </div>
+                    </div>
+                </div> */}
+            {/* </div> */}
         </div>
     )
 }

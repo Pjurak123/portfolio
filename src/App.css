@@ -43,3 +43,11 @@ object-fit: cover;
   display: none;
 }
 
+
+/* Tablet mode */
+
+@media screen and (min-width: 767px){
+  html{
+    font-size: 1.25rem;
+  }
+}
