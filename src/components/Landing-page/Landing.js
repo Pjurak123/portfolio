@@ -8,23 +8,6 @@ import Logo from "./images/logo.svg";
 
 function Landing(){
 
-
-    const [primary, setPrimary] = useState(false);
-    const [secondary, setSecondary] = useState(true)
-
-    function handleChange(e){
-       const value = e.target.value;
-
-       if(value === "hrv"){
-           setPrimary(true);
-           setSecondary(false)
-       }else{
-        setPrimary(false);
-        setSecondary(true);
-       }
-    }
-
-
     /* Animation part */
 
     gsap.registerPlugin(gsap,ScrollTrigger)
@@ -53,6 +36,10 @@ function Landing(){
     });
  
 
+    /* Resume button */
+
+  
+
 
     return(
         <div className="landing-container">
@@ -68,13 +55,7 @@ function Landing(){
             <nav className="navigation-container container-landing">
                 <img src={Logo} alt="logo" className="symbol"></img>
                 <div className="button-container">
-                    <button className={(primary ? "button" : "active button")} value="hrv" onClick={handleChange} >
-                        HRV
-                    </button>
-                    <p className="button">/</p>
-                    <button className={(secondary ? "button" : "active button")} value="eng" onClick={handleChange}>
-                        ENG
-                    </button>
+                <a  className="resume-button" href="https://europa.eu/europass/eportfolio/screen/share/cfeb28b6-1cee-42fe-83dc-8c4f558652f2?lang=en" rel="noreferrer" target="_blank" download>Resume</a>
                 </div>
             </nav>
             {/* Text in the middle of the screen */}
