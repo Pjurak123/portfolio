@@ -1,0 +1,118 @@
+.project-container{
+    background: #171717;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    height: 100%;
+    width: 100%;
+}
+
+.projects-title{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ededed;
+    position: relative;
+    padding: 3rem 0 3rem;
+}
+.projects-title::after{
+    content: "";
+    display: block;
+    height: 0.5px;
+    background-color: #ededed;
+    position: relative;
+    top: -12px;
+    left: 14rem;
+    overflow: hidden;
+    width: 85px;
+}
+
+/* Card container and content */
+.card{
+    border: 1px solid #ededed;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.card:last-child{
+    margin-bottom: 0;
+}
+.icons-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.project-title{
+    color: #ededed;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    padding: 1rem 0;
+    display: inline-block;
+}
+
+.project-description{
+    color: #444;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.5rem;
+}
+.project-list-technologies{
+    font-family: 'Space Mono', monospace;
+    font-size: .8rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: #444;
+    list-style-type: none;
+    padding: 1rem 1rem 0;
+}
+
+/* Tablet mode */
+
+@media screen and (min-width: 767px){
+    .projects-title::after{
+        width: 400px;
+    }
+   .row{
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       column-gap: 5%;
+   }
+}
+
+
+
+/* Smallest mobile phone */
+@media screen and (max-width: 374px){
+    .projects-title::after{
+        width: 25px;
+    }
+}
+
+
+/* Desktop mode 1024 x 768 */
+
+@media screen and (min-width: 1024px) {
+    .projects-title::after{
+        width: 500px;
+    }
+    .project-content{
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    .projects-title::after{
+        width: 67.5%;
+    }
+    .row{
+       column-gap: 2.5%;
+    }
+    .external-icon:hover{
+        margin-left: 15%;
+        margin-bottom: 15%;
+        transition: all .2s ease-in-out;
+    }
+    .project-title:hover{
+        transition: all .2s ease-in-out;
+        color: #da0037;
+    }
+    .card:hover{
+        transition: all .5s ease-in-out;
+    }
+}

@@ -1,0 +1,148 @@
+/* Container always 100% height of user screen */
+.landing-container{
+    background: #000;
+    height: 100vh;
+    width: 100%;
+}
+
+.container{
+    padding: 0 2rem 0;
+}
+
+.container-landing{
+    padding: 0 2rem 0;
+}
+/* Navigation container for logo and language buttons */
+.navigation-container{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    height: 120px;
+}
+.button-container{
+    align-items: center;
+    display: flex;
+    flex: row;
+    height: 100%;
+}
+.button{
+    border: none;
+    background: #171717;;
+    color: #ededed;
+    cursor: pointer;
+    font-style: italic;
+    text-decoration: none;
+}
+
+.active{
+    text-decoration: line-through;
+    text-decoration-thickness: .15rem;
+}
+
+
+/* Text container with text in the middle of the screen */
+.text-container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 100%;
+    justify-content: center;
+}
+.landing-text{
+    font-size: 1.5rem;
+    color: #ededed;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: lighter;
+    line-height: 4rem;
+}
+
+.pink-color{
+    color: #da0037;
+}
+
+/* Social media */
+
+.social-media-container{
+    padding-left: 2rem;
+    width: 30%;
+}
+
+.social-media{
+    display: flex;
+    flex-direction: column;
+}
+
+.social-icon{
+    cursor: pointer;
+    padding-bottom: 1rem;
+}
+
+.social-icon:hover{
+    transform: scale(1.1);
+    transition: .2s all ease-in-out;
+}
+
+/* Scroll section */
+
+.scroll-container{
+    position: relative;
+    bottom: 0;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+.scroll-text{
+    color: #444444;
+    font-size: .6rem;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+.triangle{
+    margin: 0 auto;
+    padding: .5rem;
+    text-align: center;
+}
+
+/* Logo animation in the middle of the screen */
+
+.logo-animation{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Tablet mode */
+
+@media screen and (min-width: 1024px) {
+    .social-media{
+        position: fixed;
+    }
+    .social-media::after{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 90px;
+        margin-left: .7rem;
+        background-color: #ededed;
+        bottom: -3.5rem;
+    }
+    .social-media-container{
+        padding-left: 2rem;
+    }
+    .textbox{
+        font-size: 1.5rem;
+    }
+    .scroll-container{
+        position: absolute;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .scroll-container{
+        position: relative;
+    }
+}

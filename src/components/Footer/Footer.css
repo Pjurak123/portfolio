@@ -1,0 +1,54 @@
+.footer-container{
+    background: #171717;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+.footer-content{
+    margin: 0 auto;
+    text-align: center;
+    width: 70%;
+}
+
+.footer-media{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer-designed{
+    color: #444444;
+    font-family: 'Space Mono', monospace;
+    font-size: .8rem;
+    padding-bottom: .5rem;
+}
+.footer-copyright{
+    color: #444444;
+    font-family: "Space Mono", monospace;
+    font-size: .8rem;
+    padding-bottom: 1rem;
+}
+.media:hover{
+    fill: #da0037;
+    transition: 0.2s ease-in-out;
+}
+.scale{
+    transform: scale(.5);
+}
+
+/* Tablet mode */
+
+@media screen and (min-width: 767px){
+
+.footer-media{
+    max-width: 262px;
+    margin: 0 auto;
+}
+.footer-copyright{
+    font-size: .7rem;
+}
+.footer-designed{
+    font-size: .7rem;
+}
+}

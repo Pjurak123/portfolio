@@ -1,0 +1,151 @@
+.about-container{
+    background: #171717;
+    overflow-x: hidden;
+    overflow: hidden;
+    overflow-y: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.about-me-title{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ededed;
+    position: relative;
+    padding: 3rem 0 2rem;
+}
+
+.about-me-title::after{
+    content: "";
+    display: block;
+    height: 0.5px;
+    background-color: #ededed;
+    position: relative;
+    top: -12px;
+    left: 7rem;
+    overflow: hidden;
+    width: 200px;
+}
+
+.first-part{
+    padding-bottom: 1rem;
+}
+
+.about-text-color{
+    color:  #444444;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+    opacity: .7;
+    line-height: 1.5rem;
+}
+
+/* Text before used technologies and list of them */
+.intro-tech{
+    padding-top: 1rem;
+}
+
+.technology-list{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+    gap: 0px 10px;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+    text-align: left;
+    margin-bottom: 0;
+    padding-bottom: 3rem;
+}
+.list-item::before{
+    font-size: 1rem;
+    content: ">";
+    padding-right: .7rem;
+    color: #da0037;
+    line-height: .5rem;
+}
+
+.list-item{
+    color: #444444;
+    opacity: .7;
+    font-family: 'Space Mono', monospace;
+    font-size: .9rem;
+    padding-bottom: .7rem;
+}
+
+/* .about-me-image-container{
+    display: none;
+    position: relative;
+    margin: 0 auto;
+    height: 250px;
+    width: 250px;
+}
+.about-wrapper{
+    background: url("./images/profile1.svg");    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    display: none;
+    position: absolute;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+.about-layer{
+    position: absolute;
+    background-color: #da0037;
+    border-radius: .4rem;
+    filter: opacity(.5) brightness(100%);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.about-wrapper::after{
+    border: 2px solid green;
+    top: 20px;
+    left: 20px;
+} */
+
+/* Tablet mode */
+
+@media screen and (min-width: 767px) {
+    .about-me-title{
+        font-size: 1.35rem;
+        padding-top: 5rem;
+    }
+    .about-me-title::after{
+        margin-left: 1rem;
+        width: 80%;
+        overflow: hidden;
+    }
+}
+
+/* Desktop mode */
+@media screen and (min-width: 1024px){
+    .about-container{
+        height: 100vh;
+        width: 100%;
+    }
+    .container{
+        padding: 0 8rem 0 !important;
+    }
+  .about-row{
+      display: flex;
+      flex-direction: row ;
+  }
+  .about-me-text-container{
+      max-width: 80%;
+      margin: 0 auto;
+      height: 100%;
+  }
+}
+
+
+/* Smallest mobile phone mode */
+
+@media screen and (max-width: 374px) {
+    .about-me-title::after{
+        width: 150px;
+    }
+}
+
