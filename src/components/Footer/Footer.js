@@ -1,9 +1,24 @@
-import React from "react";
+import React, {useRef, useEffect} from "react";
 import "./Footer.css";
+import {gsap} from "gsap"
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 function Footer(){
 
     const time = new Date().getFullYear();
+
+    // const aboutAnime = useRef(null);
+    // useEffect(() => {
+    //     const el = aboutAnime.current;
+    //     gsap.fromTo(el, {x: 200, opacity: 0, visibility: "hidden", duration: 1, smoothOrigin: true}, {x: 0, opacity: 1, visibility: "visible", duration: 2, scrollTrigger: {
+    //         trigger: el,
+    //         start: 130,
+    //         markers: true
+    //     }
+    // });
+    // }, [])
+
 
     return(
         <div className="footer-container is-loading">

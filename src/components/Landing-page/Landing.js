@@ -37,9 +37,9 @@ function Landing(){
         tl.fromTo(".logo-svg", {opacity: 1}, {opacity: 0, ease: "power4.out", scale: 0.2, duration: 1});
         tl.to(".landing-container", {backgroundColor: "#171717"});
         tl.fromTo(".navigation-container", {opacity: 0, y: 150, smoothOrigin: true }, {opacity: 1, y: 0, duration: 1});
-        tl.fromTo(".text1", {opacity: 0, y: 50 }, {opacity: 1, y: 0, duration: 0.5});
-        tl.fromTo(".text2", {opacity: 0, y: 50 }, {opacity: 1, y: 0, duration: 0.5});
-        tl.fromTo(".text3", {opacity: 0, y: 50 }, {opacity: 1, y: 0, duration: 0.5});
+        tl.fromTo(".text1", {opacity: 0, y: 50 }, {opacity: 1, y: 0, duration: 0.8});
+        tl.fromTo(".text2", {opacity: 0, y: 50 }, {opacity: 1, y: 0, duration: 0.8});
+        tl.fromTo(".text3", {opacity: 0, y: 50 }, {opacity: 1, y: 0, duration: 0.8});
         tl.fromTo(".social-media", {opacity: 0, x: -100}, {opacity: 1, x: 0, duration: 1})
         tl.fromTo(".scroll-container", {opacity: 0}, {opacity: 1, onComplete:
             () => 

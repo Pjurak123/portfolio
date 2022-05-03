@@ -8,17 +8,25 @@ import {ScrollTrigger} from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 
-function Projects(props) {
+function Projects() {
 
     const projectStart = useRef(null);
     useEffect(() => {
-        const projectEl = projectStart.current;
-        gsap.fromTo(projectEl, {x: 100, opacity: 0, visibility: "hidden"}, {visibility: "visible", x: 0, opacity: 1, duration: 3, scrollTrigger: {
-            trigger: projectEl,
-            start: 40
+        const el = projectStart.current;
+        const tl = gsap.timeline({duration: 2, scrollTrigger: {
+            start: 800
         }});
-    }, [])
-
+        // tl.fromTo(el,  {opacity: 0, visibility: "hidden", smoothOrigin: true}, { opacity: 1, visibility: "visible", duration: 2, scrollTrigger: {
+        //     trigger: el,
+        //     start: 800,
+        // }})
+        tl.fromTo(".projects-title", {y: 300, opacity: 0, duration: 2}, {y: 0, opacity: 1, duration: 2, scrollTrigger: {
+            trigger: el,
+            start: 800
+        }})
+        tl.fromTo(".card", {opacity:0, y: 200, duration: 2}, {opacity: 1, y:0,  duration: 2})
+    },
+    [])
 
 
     return(
