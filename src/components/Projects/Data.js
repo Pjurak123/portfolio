@@ -14,7 +14,7 @@ export const Data = [
     {
         id: 2,
         title: "Bank landing page",
-        description: "Landing page for bank app with nice layout. Fully responsive single page page with specific details on every page element. ",
+        description: "Landing page for bank app with nice layout. Fully responsive single page with specific details on every element. ",
         link: "https://bank-app.patrik-jurak.from.hr/",
         items:{
             1:"Html",
