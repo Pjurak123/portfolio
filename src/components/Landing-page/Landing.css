@@ -166,3 +166,14 @@
         position: relative;
     }
 }
+
+@media screen and (min-width: 1919px){
+    .social-media::after{
+        height: 150px;
+        bottom: -4.5rem;
+        left: -.25rem;
+    }
+    .social-media{
+        padding-top: 2rem;
+    }
+}

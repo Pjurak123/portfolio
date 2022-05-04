@@ -9,9 +9,9 @@ function Contact() {
     const contactAnime = useRef(null);
     useEffect(() => {
         const el = contactAnime.current;
-        gsap.fromTo(el, {opacity: 0, visibility: "hidden", duration:3,  smoothOrigin: true}, {opacity: 1, visibility: "visible", duration: 2.5,  scrollTrigger: {
+        gsap.fromTo(el, 7, {opacity: 0, visibility: "hidden",  smoothOrigin: true}, {opacity: 1, visibility: "visible", ease: "power1.out", scrollTrigger: {
             trigger: el,
-            start: 2100,
+            start: 2300,
         }
     });
     }, [])

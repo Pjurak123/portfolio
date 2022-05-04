@@ -64,3 +64,9 @@
         margin: 0 auto;
     }
 }
+
+@media screen and (min-width: 1919px){
+    .contact-text{
+        max-width: 650px;
+    }
+}
