@@ -66,6 +66,6 @@ object-fit: cover;
 
 @media screen and (min-width: 1919px) {
   html{
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 }
